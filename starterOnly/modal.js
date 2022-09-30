@@ -13,20 +13,19 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeConst = document.getElementById("closeModal");
 const contentForm = document.querySelector(".content");
-const submitBtn = document.querySelector(".btn-submit")
+const submitBtn = document.querySelector(".btn-submit");
 const viewContentSucess = document.querySelector(".contentsucess");
 
 
 
-var inputFirst = document.getElementById('first');
-var inputLast = document.getElementById('last');
-let inputEmail = document.getElementById('email');
-var inputBirthdate = document.getElementById('birthdate');
-var inputQuantity = document.getElementById('quantity');
+var inputFirst = document.getElementById("first");
+var inputLast = document.getElementById("last");
+var inputEmail = document.getElementById("email");
+var inputBirthdate = document.getElementById("birthdate");
+var inputQuantity = document.getElementById("quantity");
 var inputLocation = document.querySelectorAll('input[name="location"]');
 var inputCheckbox1 = document.getElementById("checkbox1");
 var inputCheckbox2 = document.getElementById("checkbox2");
-let modalHeight;
 
 
 // launch modal event
@@ -44,7 +43,7 @@ submitBtn.addEventListener("click", verifForm);
 function verifForm(){
   var modalHeight = document.querySelector(".content").clientHeight;
   console.log(modalHeight);
-  console.log("Vérification du formulaire de la modal")
+  console.log("Vérification du formulaire de la modal");
 
   //Défniition des Regex
 
@@ -56,8 +55,8 @@ function verifForm(){
 
   if(inputFirst.value.length < 2){
     var inputFirsterr = ("Le Prenom saisie n'est pas valide.\n");
-    console.log(inputFirsterr)
-    let inputFirsterrMsg = document.getElementById('prenomErr');
+    console.log(inputFirsterr);
+    var inputFirsterrMsg = document.getElementById("prenomErr");
     inputFirsterrMsg.style.display ="block";
   }
   else{

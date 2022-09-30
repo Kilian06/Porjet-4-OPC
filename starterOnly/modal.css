@@ -454,9 +454,11 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: normal;
-  white-space: nowrap;
+  width: 70vw;
+  max-width: 1000px;
+
 }
 .hero-text {
   width: 146%;
@@ -480,6 +482,7 @@ input[data-error]::after {
   height: 100%;
   display: block;
   padding: 0;
+  object-fit: cover;
 }
 .copyrights {
   color: #fe142f;
@@ -514,7 +517,7 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 2.5rem;
+    font-size: 4rem;
     white-space: unset;
   }
   .hero-text {
