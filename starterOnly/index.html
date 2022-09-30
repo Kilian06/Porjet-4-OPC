@@ -52,7 +52,7 @@
       </div>
 
       <div class="bground">
-        <div class="content">
+        <div class="content" id="contentForm">
           <span class="close" id="closeModal"></span>
           <div class="modal-body">
             <form
@@ -71,6 +71,9 @@
                   name="first"
                   minlength="2"
                 /><br>
+              <div class="erreur" id="prenomErr">
+                Veuillez entrer 2 caractères ou plus pour le champ du prénom.
+              </div>
               </div>
               <div
                 class="formData">
@@ -83,6 +86,9 @@
                   minlength="2"
                 /><br>
               </div>
+              <div class="erreur" id="nomErr">
+                Veuillez entrer 2 caractères ou plus pour le champ du nom.
+              </div>
               <div
                 class="formData">
                 <label for="email">E-mail</label><br>
@@ -92,6 +98,9 @@
                   id="email"
                   name="email"
                 /><br>
+              </div>
+              <div class="erreur" id="emailErr">
+                Veuillez entrer un email valide.
               </div>
               <div
                 class="formData">
@@ -103,10 +112,16 @@
                   name="birthdate"
                 /><br>
               </div>
+              <div class="erreur" id="birthdateErr">
+                Vous devez entrer votre date de naissance.
+              </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+              </div>
+              <div class="erreur" id="quantityErr">
+                Vous devez entrer le nombre de tournois auquel vous avez deja participé.
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -180,6 +195,9 @@
                   Portland</label
                 >
               </div>
+              <div class="erreur" id="locationErr">
+                Vous devez selectioner le lieu du tournois.
+              </div>
 
               <div
                 class="formData">
@@ -194,7 +212,9 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <br>
+                <div class="erreur" id="checkbox1Err">
+                  Vous devez accepter les conditions d'utilisation.
+                </div>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
@@ -204,12 +224,16 @@
               </div>
               <input
                 class="btn-submit"
+                type="button"
                 class="button"
                 value="C'est parti"
-                onclick="verifForm()"
               />
             </form>
           </div>
+        </div>
+        <div class="contentsucess">
+          Merci ! Votre réservation a été reçue.
+          
         </div>
       </div>
     </main>
