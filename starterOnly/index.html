@@ -52,7 +52,7 @@
       </div>
 
       <div class="bground">
-        <div class="content">
+        <div class="content" id="contentForm">
           <span class="close" id="closeModal"></span>
           <div class="modal-body">
             <form
@@ -63,7 +63,7 @@
             >
               <div
                 class="formData">
-                <label>Prénom</label><br>
+                <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -71,20 +71,27 @@
                   name="first"
                   minlength="2"
                 /><br>
+              <div class="erreur" id="prenomErr">
+                Veuillez entrer 2 caractères ou plus pour le champ du prénom.
+              </div>
               </div>
               <div
                 class="formData">
-                <label>Nom</label><br>
+                <label for="last">Nom</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
+                  minlength="2"
                 /><br>
+              </div>
+              <div class="erreur" id="nomErr">
+                Veuillez entrer 2 caractères ou plus pour le champ du nom.
               </div>
               <div
                 class="formData">
-                <label>E-mail</label><br>
+                <label for="email">E-mail</label><br>
                 <input
                   class="text-control"
                   type="email"
@@ -92,9 +99,12 @@
                   name="email"
                 /><br>
               </div>
+              <div class="erreur" id="emailErr">
+                Veuillez entrer un email valide.
+              </div>
               <div
                 class="formData">
-                <label>Date de naissance</label><br>
+                <label for="birthdate">Date de naissance</label><br>
                 <input
                   class="text-control"
                   type="date"
@@ -102,10 +112,16 @@
                   name="birthdate"
                 /><br>
               </div>
+              <div class="erreur" id="birthdateErr">
+                Vous devez entrer votre date de naissance.
+              </div>
               <div
                 class="formData">
-                <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+              </div>
+              <div class="erreur" id="quantityErr">
+                Vous devez entrer le nombre de tournois auquel vous avez deja participé.
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -116,6 +132,7 @@
                   id="location1"
                   name="location"
                   value="New York"
+                  
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -127,6 +144,7 @@
                   id="location2"
                   name="location"
                   value="San Francisco"
+                  
                 />
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
@@ -177,6 +195,9 @@
                   Portland</label
                 >
               </div>
+              <div class="erreur" id="locationErr">
+                Vous devez selectioner le lieu du tournois.
+              </div>
 
               <div
                 class="formData">
@@ -185,12 +206,15 @@
                   type="checkbox"
                   id="checkbox1"
                   checked
+                  required
                 />
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <br>
+                <div class="erreur" id="checkbox1Err">
+                  Vous devez accepter les conditions d'utilisation.
+                </div>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
@@ -200,12 +224,16 @@
               </div>
               <input
                 class="btn-submit"
-                type="submit"
+                type="button"
                 class="button"
                 value="C'est parti"
               />
             </form>
           </div>
+        </div>
+        <div class="contentsucess">
+          Merci ! Votre réservation a été reçue.
+          
         </div>
       </div>
     </main>
