@@ -59,7 +59,8 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              id="formid"
+              onsubmit="return validate(event);"
             >
               <div
                 class="formData">
@@ -69,7 +70,7 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
+                  minlength="0"
                 /><br>
               <div class="erreur" id="prenomErr">
                 Veuillez entrer 2 caractères ou plus pour le champ du prénom.
@@ -77,13 +78,13 @@
               </div>
               <div
                 class="formData">
-                <label for="last">Nom</label><br>
+                <label for="last" >Nom</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
-                  minlength="2"
+                  minlength="0"
                 /><br>
               </div>
               <div class="erreur" id="nomErr">
@@ -206,7 +207,6 @@
                   type="checkbox"
                   id="checkbox1"
                   checked
-                  required
                 />
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
@@ -224,16 +224,24 @@
               </div>
               <input
                 class="btn-submit"
-                type="button"
+                type="submit"
                 class="button"
                 value="C'est parti"
               />
             </form>
           </div>
         </div>
-        <div class="contentsucess">
-          Merci ! Votre réservation a été reçue.
-          
+        <div class="contentsucesshide">
+          <div class="contentsucess">
+          <span class="close" id="closeModal2"></span>
+          <div class="msgcontentsucess">Merci pour<br>votre inscription</div>
+          <input class="btn-contentsucess"
+          type="button"
+          value="Fermer"
+          id="btnclosecontentsucess"
+          onclick="closecontentsecc()"/>
+          </div>
+        </div>
         </div>
       </div>
     </main>
