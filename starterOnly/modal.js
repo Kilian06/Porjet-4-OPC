@@ -20,8 +20,6 @@ const boxContentSucess = document.querySelector(".contentsucess");
 const btnclosecontent = document.querySelector("btn-contentsucess")
 const msgContentSucess = document.querySelector(".msgcontentsucess")
 
-
-
 var inputFirst = document.getElementById("first");
 var inputLast = document.getElementById("last");
 var inputEmail = document.getElementById("email");
@@ -186,14 +184,8 @@ function validate(event){
       viewContentSucess.style.display="block";
       boxContentSucess.style.height = modalHeight - 100 +"px";
       msgContentSucess.style.paddingTop = (modalHeight / 2) - 50 + "px";
+      document.getElementById('formid').reset();
       console.log("normalement j'affiche que c'est bien recu");
-      // setTimeout(() => {
-      //   console.log("Fermeture de la popin de confirmation");
-      //   modalbg.style.display="none";
-      //   contentForm.style.display="block";
-      //   viewContentSucess.style.display="none";
-      // },3000)
-
     }
     else{
       console.log(inputFirsterr + inputLasterr +inputEmailErr + inputDateErr + inputQuantityErr + inputLocationErr + inputCheckbox1Err);
