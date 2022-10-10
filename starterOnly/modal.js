@@ -36,7 +36,6 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
-  console.log("ouverture de la modal");
 }
 
 // submitBtn.addEventListener("click", verifForm);
@@ -45,8 +44,6 @@ function launchModal() {
 function validate(event){
   event.preventDefault();
   var modalHeight = document.querySelector(".content").clientHeight;
-  console.log(modalHeight);
-  console.log("Vérification du formulaire de la modal");
 
   //Défniition des Regex
 
@@ -58,7 +55,6 @@ function validate(event){
 
   if(inputFirst.value.length < 2){
     var inputFirsterr = ("Le Prenom saisie n'est pas valide.\n");
-    console.log(inputFirsterr);
     var inputFirsterrMsg = document.getElementById("prenomErr");
     inputFirsterrMsg.style.display ="block";
     let parentInputFirst = inputFirst.parentNode;
@@ -198,12 +194,6 @@ closeConst.addEventListener('click', event => {
   modalbg.style.display="none"
 })
 
-closeConst2.addEventListener('click', event => {
-  console.log("ok")
-  modalbg.style.display="none";
-  contentForm.style.display="block";
-  viewContentSucess.style.display="none";
-})
 
 function closecontentsecc(){
   console.log("Fermeture de la popin de confirmation");
@@ -211,4 +201,7 @@ function closecontentsecc(){
   contentForm.style.display="block";
   viewContentSucess.style.display="none";
 }
+
+closeConst2.addEventListener('click', closecontentsecc)
+
 
