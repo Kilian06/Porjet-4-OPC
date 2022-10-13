@@ -185,15 +185,21 @@ closeConst.addEventListener('click', event => {
   modalbg.style.display="none"
 })
 
+<<<<<<< HEAD
 closeConst2.addEventListener('click', event => {
   modalbg.style.display="none";
   contentForm.style.display="block";
   viewContentSucess.style.display="none";
 })
+=======
+>>>>>>> 8d7b28aafd568a3205514539d43fe169d931a1b1
 
 function closecontentsecc(){
   modalbg.style.display="none";
   contentForm.style.display="block";
   viewContentSucess.style.display="none";
 }
+
+closeConst2.addEventListener('click', closecontentsecc)
+
 
