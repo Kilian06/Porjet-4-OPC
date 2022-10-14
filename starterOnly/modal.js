@@ -1,3 +1,5 @@
+// Gestion du menu burger et de la barre de navigation
+
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -7,7 +9,7 @@ function editNav() {
   }
 }
 
-// DOM Elements
+// Definition des DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
@@ -20,6 +22,7 @@ const boxContentSucess = document.querySelector(".contentsucess");
 const btnclosecontent = document.querySelector("btn-contentsucess")
 const msgContentSucess = document.querySelector(".msgcontentsucess")
 
+// Definition des variables d'input
 var inputFirst = document.getElementById("first");
 var inputLast = document.getElementById("last");
 var inputEmail = document.getElementById("email");
@@ -30,19 +33,21 @@ var inputCheckbox1 = document.getElementById("checkbox1");
 var inputCheckbox2 = document.getElementById("checkbox2");
 
 
-// launch modal event
+// lancement de la modal par evenement
+// foreach car gestion des 2 bouton (responsive)
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // launch modal form
+// Modification du display pour afficher la modal
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-// submitBtn.addEventListener("click", verifForm);
 
-// Vérification unitaire onchange
+// Debut de la Vérification unitaire des inputs
 function validate(event){
   event.preventDefault();
+  // récupération de la hauteur de la modal pour appliquer à la modal sucess
   var modalHeight = document.querySelector(".content").clientHeight;
 
   //Défniition des Regex
@@ -164,10 +169,9 @@ function validate(event){
       inputCheckbox1ErrMsg.style.display ="block";
     };
 
-
+// définition de l'action si tout est sans erreur
     if(inputFirsterr + inputLasterr +inputEmailErr + inputDateErr + inputQuantityErr + inputLocationErr + inputCheckbox1Err === "")
     {
-      
       viewContentSucess.style.height = modalHeight+"px";
       contentForm.style.display="none";
       viewContentSucess.style.display="block";
@@ -175,6 +179,7 @@ function validate(event){
       msgContentSucess.style.paddingTop = (modalHeight / 2) - 50 + "px";
       document.getElementById('formid').reset();
     }
+    // si il y a une erreur dans un input alors
     else{
       console.log(inputFirsterr + inputLasterr +inputEmailErr + inputDateErr + inputQuantityErr + inputLocationErr + inputCheckbox1Err);
     };
@@ -190,7 +195,7 @@ closeConst2.addEventListener('click', event => {
   contentForm.style.display="block";
   viewContentSucess.style.display="none";
 })
-
+// Fermeture de la modal de sucess
 function closecontentsecc(){
   modalbg.style.display="none";
   contentForm.style.display="block";

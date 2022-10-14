@@ -4,24 +4,31 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- import des styles -->
     <link rel="stylesheet" href="modal.css" />
+    <!-- import fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- import font google -->
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- debut menu de navigation -->
     <div class="topnav" id="myTopnav">
+      <!-- logo du menu top -->
       <div class="header-logo">
       <img alt="logo" src="Logo.png" width="auto" height="auto" />
     </div>
+    <!-- bar de navigation -->
     <div class="main-navbar">
       <a href="#" class="active"><span>Accueil</span></a>
       <a href="#"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Évènements passés</span></a>
+      <!-- Menu burger -->
       <a href="javascript:void(0);" class="icon" onclick="editNav()">
         <i class="fa fa-bars"></i>
       </a>
@@ -29,6 +36,7 @@
     </div>
   </div>
     <main>
+      <!-- zone titre et image -->
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
@@ -50,7 +58,7 @@
           je m'inscris
         </button>
       </div>
-
+      <!-- Debut Modal -->
       <div class="bground">
         <div class="content" id="contentForm">
           <span class="close" id="closeModal"></span>
@@ -65,6 +73,7 @@
               <div
                 class="formData">
                 <label for="first">Prénom</label><br>
+             <!-- minlenght a zero pour demo sinon mettre 2 -->
                 <input
                   class="text-control"
                   type="text"
@@ -79,6 +88,7 @@
               <div
                 class="formData">
                 <label for="last" >Nom</label><br>
+              <!-- minlenght a zero pour demo sinon mettre 2 -->
                 <input
                   class="text-control"
                   type="text"
